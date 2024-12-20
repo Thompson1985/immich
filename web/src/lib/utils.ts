@@ -148,6 +148,7 @@ export const getJobName = derived(t, ($t) => {
       [JobName.Search]: $t('search'),
       [JobName.Library]: $t('library'),
       [JobName.Notifications]: $t('notifications'),
+      [JobName.BackupDatabase]: $t('admin.backup_database'),
     };
 
     return names[jobName];
@@ -260,7 +261,7 @@ export const copyToClipboard = async (secret: string) => {
 };
 
 export const makeSharedLinkUrl = (externalDomain: string, key: string) => {
-  return new URL(`share/${key}`, externalDomain || window.location.origin).href;
+  return new URL(`share/${key}`, externalDomain || globalThis.location.origin).href;
 };
 
 export const oauth = {
@@ -282,7 +283,7 @@ export const oauth = {
     try {
       const redirectUri = location.href.split('?')[0];
       const { url } = await startOAuth({ oAuthConfigDto: { redirectUri } });
-      window.location.href = url;
+      globalThis.location.href = url;
       return true;
     } catch (error) {
       handleError(error, $t('errors.unable_to_login_with_oauth'));
