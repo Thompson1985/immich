@@ -62,7 +62,7 @@
     "node": ">=20.0.0"
   },
   "dependencies": {
-    "fast-glob": "^3.3.2",
+    "fast-glob": "^3.3.3",
     "fastq": "^1.17.1",
     "lodash-es": "^4.17.21"
   },
