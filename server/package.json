@@ -39,7 +39,7 @@
     "@nestjs/bullmq": "^11.0.1",
     "@nestjs/common": "^11.0.4",
     "@nestjs/core": "^11.0.4",
-    "@nestjs/platform-express": "^11.0.4",
+    "@nestjs/platform-express": "^11.1.15",
     "@nestjs/platform-socket.io": "^11.0.4",
     "@nestjs/schedule": "^6.0.0",
     "@nestjs/swagger": "^11.0.2",
